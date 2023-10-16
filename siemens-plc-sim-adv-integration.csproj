@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net481</TargetFramework>
+    <RootNamespace>siemens_plc_sim_adv_integration</RootNamespace>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Siemens.Simatic.Simulation.Runtime.Api.x64">
+      <HintPath>Siemens.Simatic.Simulation.Runtime.Api.x64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Siemens.Simatic.Simulation.Runtime.Api.x64.dll">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>  
+  <ItemGroup>
+    <Content Include="Siemens.Engineering.dll" />
+  </ItemGroup>
+    <ItemGroup>
+    <Reference Include="Siemens.Engineering">
+      <HintPath>Siemens.Engineering.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
